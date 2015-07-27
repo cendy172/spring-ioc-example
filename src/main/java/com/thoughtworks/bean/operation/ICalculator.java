@@ -1,16 +1,22 @@
 package com.thoughtworks.bean.operation;
 
-import org.apache.commons.lang3.StringUtils;
+import com.thoughtworks.bean.validator.InputValidator;
 
 public abstract class ICalculator {
+
+    private final InputValidator inputValidator;
+
+    protected ICalculator() {
+        inputValidator = new InputValidator();
+    }
 
     public abstract String operate(String a, String b);
 
     public final String add(String a, String b) {
-        boolean invalidInput = !StringUtils.isNumeric(a) || !StringUtils.isNumeric(b) || a.length() > 2 || b.length() > 2;
-        if (invalidInput) {
-            return "Error";
+        if (inputValidator.validInput(a, b)) {
+            return operate(a, b);
         }
-        return operate(a, b);
+        return "Error";
     }
+
 }

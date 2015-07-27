@@ -6,9 +6,10 @@ repositories {
 }
 
 dependencies {
-    compile (
-    'org.slf4j:slf4j-api:1.7.12',
-    'org.springframework:spring:2.5.6.SEC03'
+    compile(
+            'org.slf4j:slf4j-api:1.7.12',
+            'org.springframework:spring:2.5.6.SEC03',
+            'org.apache.commons:commons-lang3:3.4'
     )
     testCompile 'junit:junit:4.12'
 }

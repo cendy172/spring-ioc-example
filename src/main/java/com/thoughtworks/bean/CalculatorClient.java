@@ -1,16 +1,12 @@
 package com.thoughtworks.bean;
 
-import com.thoughtworks.bean.operation.AddCalculator;
 import com.thoughtworks.bean.operation.ICalculator;
-import com.thoughtworks.bean.operation.PlusCalculator;
 
 public class CalculatorClient {
     private ICalculator addCalculator;
     private ICalculator plusCalculator;
 
     public CalculatorClient() {
-        addCalculator = new AddCalculator();
-        plusCalculator = new PlusCalculator();
     }
 
     public String add(String a, String b) {
@@ -19,5 +15,13 @@ public class CalculatorClient {
 
     public String plus(String a, String b) {
         return plusCalculator.add(a, b);
+    }
+
+    public void setAddCalculator(ICalculator addCalculator) {
+        this.addCalculator = addCalculator;
+    }
+
+    public void setPlusCalculator(ICalculator plusCalculator) {
+        this.plusCalculator = plusCalculator;
     }
 }

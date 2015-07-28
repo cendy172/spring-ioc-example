@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="inputValidator" class="com.thoughtworks.bean.validator.InputValidator"/>
+
+    <bean id="addCalculator"
+          class="com.thoughtworks.bean.operation.AddCalculator">
+        <property name="inputValidator" ref="inputValidator"/>
+    </bean>
+
+    <bean id="plusCalculator"
+          class="com.thoughtworks.bean.operation.PlusCalculator">
+        <property name="inputValidator" ref="inputValidator"/>
+    </bean>
+
+    <bean id="calculatorClient"
+          class="com.thoughtworks.bean.CalculatorClient">
+        <property name="addCalculator" ref="addCalculator"/>
+        <property name="plusCalculator" ref="plusCalculator"/>
+    </bean>
+
+</beans>

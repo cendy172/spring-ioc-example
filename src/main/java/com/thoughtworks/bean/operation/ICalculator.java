@@ -1,9 +1,11 @@
 package com.thoughtworks.bean.operation;
 
 import com.thoughtworks.bean.validator.InputValidator;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class ICalculator {
 
+    @Autowired
     private InputValidator inputValidator;
 
     protected ICalculator() {

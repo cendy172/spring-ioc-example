@@ -1,6 +1,7 @@
 package com.thoughtworks.bean;
 
-import com.thoughtworks.bean.operation.ICalculator;
+import com.thoughtworks.bean.operation.AddCalculator;
+import com.thoughtworks.bean.operation.PlusCalculator;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -14,10 +15,10 @@ import static org.mockito.MockitoAnnotations.initMocks;
 public class CalculatorClientTest {
 
     @Mock
-    private ICalculator addCalculator;
+    private AddCalculator addCalculator;
 
     @Mock
-    private ICalculator plusCalculator;
+    private PlusCalculator plusCalculator;
 
     private CalculatorClient calculatorClient;
 

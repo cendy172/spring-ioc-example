@@ -1,10 +1,16 @@
 package com.thoughtworks.bean;
 
-import com.thoughtworks.bean.operation.ICalculator;
+import com.thoughtworks.bean.operation.AddCalculator;
+import com.thoughtworks.bean.operation.PlusCalculator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CalculatorClient {
-    private ICalculator addCalculator;
-    private ICalculator plusCalculator;
+    @Autowired
+    private AddCalculator addCalculator;
+    @Autowired
+    private PlusCalculator plusCalculator;
 
     public CalculatorClient() {
         System.out.println("---- CalculatorClient created");
@@ -18,11 +24,11 @@ public class CalculatorClient {
         return plusCalculator.add(a, b);
     }
 
-    public void setAddCalculator(ICalculator addCalculator) {
+    public void setAddCalculator(AddCalculator addCalculator) {
         this.addCalculator = addCalculator;
     }
 
-    public void setPlusCalculator(ICalculator plusCalculator) {
+    public void setPlusCalculator(PlusCalculator plusCalculator) {
         this.plusCalculator = plusCalculator;
     }
 }

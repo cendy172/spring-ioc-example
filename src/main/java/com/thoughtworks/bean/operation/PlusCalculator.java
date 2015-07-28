@@ -1,5 +1,8 @@
 package com.thoughtworks.bean.operation;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PlusCalculator extends ICalculator {
     public PlusCalculator() {
         System.out.println("----- PlusCalculator created");

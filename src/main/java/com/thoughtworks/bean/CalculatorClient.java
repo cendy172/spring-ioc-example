@@ -7,6 +7,7 @@ public class CalculatorClient {
     private ICalculator plusCalculator;
 
     public CalculatorClient() {
+        System.out.println("---- CalculatorClient created");
     }
 
     public String add(String a, String b) {

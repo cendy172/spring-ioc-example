@@ -2,6 +2,7 @@ package com.thoughtworks.bean.operation;
 
 public class PlusCalculator extends ICalculator {
     public PlusCalculator() {
+        System.out.println("----- PlusCalculator created");
     }
 
     @Override

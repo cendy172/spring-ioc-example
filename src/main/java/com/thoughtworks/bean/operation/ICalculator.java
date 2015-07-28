@@ -7,6 +7,7 @@ public abstract class ICalculator {
     private InputValidator inputValidator;
 
     protected ICalculator() {
+        System.out.println("---- ICalculator constructor called");
     }
 
     public abstract String operate(String a, String b);

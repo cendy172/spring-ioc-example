@@ -7,6 +7,7 @@ public class InputValidator {
     private static final int MAX_LENGTH = 3;
 
     public InputValidator() {
+        System.out.println("--- InputValidator created");
     }
 
     public boolean validInput(String a, String b) {

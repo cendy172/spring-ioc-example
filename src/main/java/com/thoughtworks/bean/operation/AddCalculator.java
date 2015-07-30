@@ -10,6 +10,8 @@ public class AddCalculator extends ICalculator {
 
     @Override
     public String operate(String a, String b) {
+        System.out.println("before add number:" + inputValidator.getNumber());
+        inputValidator.add();
         return String.valueOf(Integer.valueOf(a) + Integer.valueOf(b));
     }
 }

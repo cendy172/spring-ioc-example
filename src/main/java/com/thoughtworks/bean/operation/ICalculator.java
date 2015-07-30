@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public abstract class ICalculator {
 
     @Autowired
-    private InputValidator inputValidator;
+    protected InputValidator inputValidator;
 
     protected ICalculator() {
         System.out.println("---- ICalculator constructor called");

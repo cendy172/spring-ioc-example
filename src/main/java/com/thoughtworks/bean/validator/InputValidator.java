@@ -1,9 +1,7 @@
 package com.thoughtworks.bean.validator;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Component;
 
-@Component
 public class InputValidator {
 
     private static final int MAX_LENGTH = 3;

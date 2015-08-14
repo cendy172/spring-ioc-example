@@ -1,11 +1,10 @@
 package com.thoughtworks.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.thoughtworks.bean.operation.AddCalculator;
 import com.thoughtworks.bean.operation.PlusCalculator;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 public class CalculatorClient {
     @Autowired
     private AddCalculator addCalculator;
